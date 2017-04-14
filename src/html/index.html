@@ -25,31 +25,44 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     </head>
-    <body>
+    <body data-spy="scroll" data-target="#bs-example-navbar-collapse-1">
 
         <header id="top">
-            <nav class="navbar navbar-default">
+            <nav class="navbar navbar-default navbar-fixed-top"
+                data-0="min-height: 150px; padding-top: 52px;"
+                data-300="min-height: 50px; padding-top: 0;">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">Blu<span>E</span>asy</a>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">Blu<span>E</span>asy</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#top">Home <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#section-services">Services</a></li>
-                        <li><a href="#section-portfolio">Portfolio</a></li>
-                        <li><a href="#section-testimonials">Testimonials</a></li>
-                        <li><a href="#section-contact">Contact</a></li>
-                    </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active">
+                                <a href="#top" class="smooth-scroll">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li>
+                                <a href="#section-services" class="smooth-scroll">Services</a>
+                            </li>
+                            <li>
+                                <a href="#section-portfolio" class="smooth-scroll">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="#section-testimonials" class="smooth-scroll">Testimonials</a>
+                            </li>
+                            <li>
+                                <a href="#section-contact" class="smooth-scroll">Contact</a>
+                            </li>
+                        </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
@@ -310,10 +323,10 @@
         <footer>
             <div class="container">
                 <ul class="bottom-nav">
-                    <li><a href="#top">home</a>|</li>
-                    <li><a href="#section-services">services</a>|</li>
-                    <li><a href="#section-portfolio">portfolio</a>|</li>
-                    <li><a href="#section-contact">contact</a></li>
+                    <li><a href="#top" class="smooth-scroll">home</a>|</li>
+                    <li><a href="#section-services" class="smooth-scroll">services</a>|</li>
+                    <li><a href="#section-portfolio" class="smooth-scroll">portfolio</a>|</li>
+                    <li><a href="#section-contact" class="smooth-scroll">contact</a></li>
                 </ul>
                 <div class="copy">
                     2017 &copy;
@@ -321,10 +334,13 @@
             </div>
         </footer>
 
+        <a href="#top" class="btn scrollup smooth-scroll"><i class="fa fa-chevron-up"></i></a>
+
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="/vendor/jquery/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
-        <!--<script src="/js/main.min.js"></script>-->
+        <script src="/vendor/skrollr/skrollr.min.js"></script>
+        <script src="/js/main.min.js"></script>
     </body>
 </html>

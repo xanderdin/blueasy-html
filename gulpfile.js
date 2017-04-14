@@ -54,6 +54,16 @@ gulp.task('clean:jquery', ()=>{
 });
 
 
+gulp.task('skrollr', ()=>{
+    return gulp.src('bower_components/skrollr/dist/skrollr.min.js')
+        .pipe(gulp.dest('dst/vendor/skrollr'));
+});
+
+gulp.task('clean:skrollr', ()=>{
+    return del(['dev/vendor/skrollr']);
+});
+
+
 gulp.task('sass', ['bootstrap'], ()=>{
     var sassOpts = {
         precision: 8,
@@ -93,7 +103,7 @@ gulp.task('clean:sass', ['clean:bootstrap'], ()=>{
 });
 
 
-gulp.task('js', ['jquery'], ()=>{
+gulp.task('js', ['jquery', 'skrollr'], ()=>{
     return gulp.src(['src/js/*.js'])
         .pipe(concat('main.js'))
         .pipe(uglify())
@@ -101,7 +111,7 @@ gulp.task('js', ['jquery'], ()=>{
         .pipe(gulp.dest('dst/js'));
 });
 
-gulp.task('clean:js', ['clean:jquery'], ()=>{
+gulp.task('clean:js', ['clean:jquery', 'clean:skrollr'], ()=>{
     return del(['dst/js']);
 });
 

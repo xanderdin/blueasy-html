@@ -1,3 +1,5 @@
 dst/
 node_modules/
 src/sass/vendor/
+npm-debug.log
+bower_components/

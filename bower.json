@@ -1,0 +1,21 @@
+{
+  "name": "blueasy-html",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Alexander Pravdin <aledin@mail.ru>"
+  ],
+  "license": "CC-BY-NC-SA-3.0",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skrollr": "^0.6.30"
+  }
+}

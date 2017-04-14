@@ -7,6 +7,11 @@ h1, h2, h3, h4, h5 {
 }
 
 
+a:focus {
+    outline: none;
+}
+
+
 .title-deco-line {
     width: 45px;
     border-width: 2px;
@@ -19,25 +24,40 @@ h1, h2, h3, h4, h5 {
 
 .navbar {
     text-transform: uppercase;
-    z-index: 100;
-    li {
-        &.active {
-            border: 1px solid $color-blue;
-        }
-        a {
-            padding-top: 5px;
-            padding-bottom: 5px;
-        }
-        top: 60px;
-    }
     .navbar-brand {
         color: $color-white;
         font-size: 30px;
         font-weight: 700;
-        line-height: 24px;
-        text-transform: uppercase;
         span {
             color: $color-blue;
+        }
+    }
+    .navbar-toggle {
+        border-color: $color-blue;
+        .icon-bar {
+           background-color: $color-blue;
+        }
+        &:hover, &:focus {
+            background-color: $color-grey2;
+        }
+    }
+    .navbar-collapse.collapse.in {
+        li {
+            padding: 5px 0;
+        }
+    }
+    li {
+        padding: 10px 0;
+        a {
+            padding: 5px 15px;
+            &:hover, &:focus {
+                border: 1px dashed $color-blue;
+            }
+        }
+        &.active {
+            a {
+                border: 1px solid $color-blue;
+            }
         }
     }
 }
@@ -53,10 +73,7 @@ section {
     background: $color-grey1 url('/img/bg/section-hero.png') no-repeat center center;
     height: 800px;
     color: $color-white;
-    // margin-top: -150px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     .hero-text {
         position: absolute;
@@ -88,7 +105,6 @@ section {
 
 
 #section-services {
-    margin-top: 648px;
     color: $color-white;
     background-color: $color-blue;
     .services-col {
@@ -156,7 +172,6 @@ section {
                     color: $color-white;
                     font-size: 72px;
                     font-weight: 300;
-                    // text-align: center;
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -304,5 +319,20 @@ footer {
     }
     .copy {
         float: right;
+    }
+}
+
+
+.scrollup {
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+    background-color: transparent;
+    padding: 10px 14px;
+    display: none;
+    border: 2px solid #337AB7;
+    color: #337AB7;
+    i {
+        color: #337AB7;
     }
 }
