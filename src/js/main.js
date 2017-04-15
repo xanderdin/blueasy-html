@@ -43,11 +43,34 @@ $(document).ready(function() {
     }
 
 
-
     // Hide mobile menu on menu item click
     $('#bs-example-navbar-collapse-1 a').click(function(event){
         if ($('#bs-example-navbar-collapse-1').hasClass('in'))
             $('#bs-example-navbar-collapse-1').collapse('toggle');
+    });
+
+
+    // Portfolio filter
+    $('.filters').on('click', 'a', function(event){
+        event.preventDefault();
+        $('.filters>li').each(function(){
+            $(this).removeClass('active');
+        });
+        $(this).parent().addClass('active');
+        var filter = $(this).attr('data-filter');
+        if (filter) {
+            $('.portfolio-item').each(function(){
+                if ($(this).hasClass(filter)) {
+                    $(this).show('fast', 'linear');
+                } else {
+                    $(this).hide('fast', 'linear');
+                }
+            });
+        } else {
+            $('.portfolio-item').each(function(){
+                $(this).show('fast', 'linear');
+            });
+        }
     });
 });
 

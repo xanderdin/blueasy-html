@@ -60,7 +60,7 @@ gulp.task('skrollr', ()=>{
 });
 
 gulp.task('clean:skrollr', ()=>{
-    return del(['dev/vendor/skrollr']);
+    return del(['dst/vendor/skrollr']);
 });
 
 
