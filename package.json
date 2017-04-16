@@ -11,7 +11,8 @@
   "license": "CC-BY-NC-SA-3.0",
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "jquery": "^1.12.4"
+    "jquery": "^1.12.4",
+    "simple-lightbox": "^1.2.9"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",

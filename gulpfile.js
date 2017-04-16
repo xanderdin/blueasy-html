@@ -64,6 +64,19 @@ gulp.task('clean:skrollr', ()=>{
 });
 
 
+gulp.task('simple-lightbox', ()=>{
+    return gulp.src([
+        'node_modules/simple-lightbox/dist/simpleLightbox.min.js',
+        'node_modules/simple-lightbox/dist/simpleLightbox.min.css',
+        ]).pipe(gulp.dest('dst/vendor/simple-lightbox'));
+});
+
+
+gulp.task('clean:simple-lightbox', ()=>{
+    return del(['dst/vendor/simple-lightbox']);
+});
+
+
 gulp.task('sass', ['bootstrap'], ()=>{
     var sassOpts = {
         precision: 8,
@@ -103,7 +116,7 @@ gulp.task('clean:sass', ['clean:bootstrap'], ()=>{
 });
 
 
-gulp.task('js', ['jquery', 'skrollr'], ()=>{
+gulp.task('js', ['jquery', 'skrollr', 'simple-lightbox'], ()=>{
     return gulp.src(['src/js/*.js'])
         .pipe(concat('main.js'))
         .pipe(uglify())
@@ -111,7 +124,11 @@ gulp.task('js', ['jquery', 'skrollr'], ()=>{
         .pipe(gulp.dest('dst/js'));
 });
 
-gulp.task('clean:js', ['clean:jquery', 'clean:skrollr'], ()=>{
+gulp.task('clean:js', [
+    'clean:jquery',
+    'clean:skrollr',
+    'clean:simple-lightbox'
+    ], ()=>{
     return del(['dst/js']);
 });
 

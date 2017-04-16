@@ -72,6 +72,22 @@ $(document).ready(function() {
             });
         }
     });
+
+
+    // Simple Lightbox for portfolio images
+    $('.portfolio-grid .image-overlay').click(function(){
+        var images = [];
+        // You can specify your own source of
+        // images urls in the selector below
+        $('.portfolio-item img').each(function(){
+            if ($(this).is(':visible')) {
+                images.push($(this).attr('src'));
+            }
+        });
+        $.SimpleLightbox.open({
+            items: images,
+        });
+    });
 });
 
 })(jQuery);
