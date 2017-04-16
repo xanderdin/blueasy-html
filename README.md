@@ -3,6 +3,8 @@
 This HTML template is based on Blueasy PSD template found at
 https://freebiesbug.com/psd-freebies/blueasy-psd-portfolio-template/ .
 
+Demo: https://xanderdin.github.io/blueasy-html/
+
 
 ### Dependencies
 
